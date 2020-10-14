@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Artstashchenko.PaymentsAppBeta.Models.Counters>
+
+@{
+    ViewData["Title"] = "Counters";
+}
+
+<h1>Table with counters for - 20-richya Peremogy 55 app 222</h1>
+
+<p>
+    <a asp-action="Create">Add a new count</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Gas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Water)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Electricity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OSMD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JEK)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Trash)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Internet)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Gas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Water)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Electricity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OSMD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JEK)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Trash)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Internet)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { Id = item.Id}) |
+                @Html.ActionLink("Details", "Details", new { Id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { Id = item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
